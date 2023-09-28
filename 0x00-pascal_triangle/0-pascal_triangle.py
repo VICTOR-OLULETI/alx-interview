@@ -8,10 +8,13 @@ def pascal_triangle(input):
     the pascal triangle.
     """
     if input == 0:
-        return ''
+        return []
+
+    if input == 1:
+        return [[1]]
+
     result = [[1]]
-    #result.append([1, 1])
-    for num in range(input):
+    for num in range(input - 1):
         if num == 0:
             result.append([1, 1])
         else:
