@@ -29,12 +29,16 @@ def minOperations(n):
             # print(result)
             count += 1
         else:
+            return 0
             # check previous entry
-            j = i - 1
-            count -= 1
+            # j = i - 1
+            # count -= 1
             # check if j is a positive number then
-            if (len(result[j][0] + result[j][1]) < n):
-                result[j + 1] = [result[j][0] + result[j][1], result[j][1]]
-            i = i - 1
+            # if (len(result[j][0] + result[j][1]) < n):
+            #    result[j + 1] = [result[j][0] + result[j][1], result[j][1]]
+            # i = i - 1
         i = i + 1
     return count
+
+# print(minOperations(4))
+# print(minOperations(12))
