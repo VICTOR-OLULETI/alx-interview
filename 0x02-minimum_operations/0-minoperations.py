@@ -30,18 +30,16 @@ def minOperations(n):
             # print(result)
             count += 1
         else:
-            # return 0
+            return 0
             # check previous entry
             j = i - 1
             count -= 1
             # storing values up
             if not(check.get(j)):
                 check[j] = 0
-            if (check[j] > 2):
-                return (0)
             check[j] += 1
             # check[j] += 1
-            # print(check)
+            print(check)
             # check if j is a positive number then
             if (len(result[j][0] + result[j][1]) < n):
                 result[j + 1] = [result[j][0] + result[j][1], result[j][1]]
@@ -50,4 +48,4 @@ def minOperations(n):
     return count
 
 # print(minOperations(19170307))
-# print(minOperations(21))
+print(minOperations(21))
